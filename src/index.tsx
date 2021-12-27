@@ -1,12 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Loader } from "./components";
+import reportWebVitals from "./reportWebVitals";
+import "./assets/css/bootstrap.min.css";
+import "./assets/css/font-awesome.min.css";
+import "./assets/css/elegant-icons.css";
+import "./assets/css/slicknav.min.css";
+import "./assets/css/style.css";
+
+const Home  = React.lazy(() => import("./pages/Home"));
+const Details  = React.lazy(() => import("./pages/Details"));
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter basename="/my-favorite-movies/">
+      <React.Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/movie/:slug" element={<Details />} />
+        </Routes>
+      </React.Suspense>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
