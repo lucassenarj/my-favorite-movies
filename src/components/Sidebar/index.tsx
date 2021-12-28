@@ -3,7 +3,14 @@ import { PopularList, RecentList } from "./../";
 import "./style.css";
 
 interface Props {
-  resource: any;
+  resource: {
+    nowPlaying: {
+      read: Function,
+    },
+    upcoming: {
+      read: Function,
+    },
+  };
 }
 
 const Sidebar: React.FC<Props> = ({ resource }) => {

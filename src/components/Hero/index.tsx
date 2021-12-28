@@ -3,7 +3,11 @@ import Movie from "../../types/Movie";
 import "./style.css";
 
 interface Props {
-  resource: any;
+  resource: {
+    latest: {
+      read: Function,
+    }
+  };
 }
 
 const Hero: React.FC<Props> = ({ resource }) => {
