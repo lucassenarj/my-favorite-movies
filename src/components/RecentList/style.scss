@@ -1,0 +1,29 @@
+@import "./../../assets/css/variable";
+
+.product__sidebar__view {
+  position: relative;
+  margin-bottom: 80px;
+
+  .filter__controls {
+    position: absolute;
+    right: 0;
+    top: -5px;
+
+    li {
+      list-style: none;
+      font-size: 13px;
+      color: #b7b7b7;
+      display: inline-block;
+      margin-right: 7px;
+      cursor: pointer;
+
+      &.active {
+        color: $white-color;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

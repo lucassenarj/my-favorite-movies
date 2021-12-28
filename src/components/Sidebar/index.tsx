@@ -1,6 +1,6 @@
 import React from "react";
 import { PopularList, RecentList } from "./../";
-import "./style.css";
+import "./style.scss";
 
 interface Props {
   resource: {

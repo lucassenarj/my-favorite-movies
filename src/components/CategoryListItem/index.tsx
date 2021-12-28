@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import generateUrlFriendly from "../../helpers/generateUrlFriendly";
 import Movie from "./../../types/Movie";
-import "./style.css";
+import "./style.scss";
 
 const CategoryListItem: React.FC<Movie> = (movie) => {
   const slug = generateUrlFriendly(`${movie.title}`);

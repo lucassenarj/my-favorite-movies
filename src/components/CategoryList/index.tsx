@@ -1,7 +1,7 @@
 import React from "react";
 import { CategoryListItem } from "..";
 import Movie from "./../../types/Movie";
-import "./style.css";
+import "./style.scss";
 
 interface Props {
   resource: any;

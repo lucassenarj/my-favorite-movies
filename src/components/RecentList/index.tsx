@@ -2,7 +2,7 @@ import React from "react";
 import Movie from "../../types/Movie";
 import MovieList from "../../types/MovieList";
 import { RecentListItem } from "./../";
-import "./style.css";
+import "./style.scss";
 
 const RecentList: React.FC<MovieList> = ({title, movies}) => {
   const list = movies.sort(() => .5 - Math.random()).slice(0,5);

@@ -1,7 +1,7 @@
 import React from "react";
 import Movie from "../../types/Movie";
 import { Link } from "react-router-dom";
-import "./style.css";
+import "./style.scss";
 import generateUrlFriendly from "../../helpers/generateUrlFriendly";
 
 const RecentListItem: React.FC<Movie> = (movie) => {

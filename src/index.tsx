@@ -7,13 +7,13 @@ import "./assets/css/bootstrap.min.css";
 import "./assets/css/font-awesome.min.css";
 import "./assets/css/elegant-icons.css";
 import "./assets/css/slicknav.min.css";
-import "./assets/css/style.css";
+import "./assets/css/style.scss";
 
 const Home  = React.lazy(() => import("./pages/Home"));
 const Details  = React.lazy(() => import("./pages/Details"));
 
-ReactDOM.render(
-  <React.StrictMode>
+const App = () => {
+  return (
     <BrowserRouter basename="/my-favorite-movies/">
       <React.Suspense fallback={<Loader />}>
         <Routes>
@@ -22,6 +22,22 @@ ReactDOM.render(
         </Routes>
       </React.Suspense>
     </BrowserRouter>
+  );
+}
+
+
+/*
+ReactDOM
+  .createRoot(document.getElementById('root'))
+  .render(
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>,
+  );
+*/
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

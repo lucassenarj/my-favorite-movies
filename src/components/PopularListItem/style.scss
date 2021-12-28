@@ -1,0 +1,56 @@
+@import "./../../assets/css/variable";
+
+.product__sidebar__comment__item {
+  margin-bottom: 20px;
+  overflow: hidden;
+  overflow: hidden;
+  transform: scale(0.9);
+  transition: ease, 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1);
+  }
+}
+
+.product__sidebar__comment__item__pic {
+  float: left;
+  margin-right: 15px;
+  width: 90px;
+  height: 130px;
+}
+
+.product__sidebar__comment__item__text {
+  overflow: hidden;
+
+  ul {
+    margin-bottom: 10px;
+
+    li {
+      list-style: none;
+      font-size: 10px;
+      color: $white-color;
+      font-weight: 700;
+      padding: 1px 10px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      display: inline-block;
+    }
+  }
+
+  h5 {
+    margin-bottom: 10px;
+
+    a {
+      color: $white-color;
+      font-weight: 700;
+      line-height: 26px;
+    }
+  }
+
+  span {
+    display: block;
+    font-size: 13px;
+    color: #b7b7b7;
+  }
+}
