@@ -1,10 +1,12 @@
 {
   "files": {
-    "main.css": "/my-favorite-movies/static/css/main.88f81c92.css",
-    "main.js": "/my-favorite-movies/static/js/main.c053a98b.js",
-    "static/js/372.f624b1f6.chunk.js": "/my-favorite-movies/static/js/372.f624b1f6.chunk.js",
-    "static/js/709.aa3055e0.chunk.js": "/my-favorite-movies/static/js/709.aa3055e0.chunk.js",
+    "main.css": "/my-favorite-movies/static/css/main.ff6b52be.css",
+    "main.js": "/my-favorite-movies/static/js/main.a8e90282.js",
+    "static/js/68.616ae98a.chunk.js": "/my-favorite-movies/static/js/68.616ae98a.chunk.js",
+    "static/js/701.627ee567.chunk.js": "/my-favorite-movies/static/js/701.627ee567.chunk.js",
     "static/js/787.eeb72b54.chunk.js": "/my-favorite-movies/static/js/787.eeb72b54.chunk.js",
+    "static/js/901.fae47529.chunk.js": "/my-favorite-movies/static/js/901.fae47529.chunk.js",
+    "static/js/569.33537695.chunk.js": "/my-favorite-movies/static/js/569.33537695.chunk.js",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/my-favorite-movies/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/ElegantIcons.svg": "/my-favorite-movies/static/media/ElegantIcons.a3709f859357b50798d9.svg",
     "static/media/fontawesome-webfont.eot": "/my-favorite-movies/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
@@ -15,14 +17,16 @@
     "static/media/ElegantIcons.eot": "/my-favorite-movies/static/media/ElegantIcons.78ba4ad1289e5a66ca11.eot",
     "static/media/ElegantIcons.ttf": "/my-favorite-movies/static/media/ElegantIcons.4555dd9ce623f8fd6d72.ttf",
     "index.html": "/my-favorite-movies/index.html",
-    "main.88f81c92.css.map": "/my-favorite-movies/static/css/main.88f81c92.css.map",
-    "main.c053a98b.js.map": "/my-favorite-movies/static/js/main.c053a98b.js.map",
-    "372.f624b1f6.chunk.js.map": "/my-favorite-movies/static/js/372.f624b1f6.chunk.js.map",
-    "709.aa3055e0.chunk.js.map": "/my-favorite-movies/static/js/709.aa3055e0.chunk.js.map",
-    "787.eeb72b54.chunk.js.map": "/my-favorite-movies/static/js/787.eeb72b54.chunk.js.map"
+    "main.ff6b52be.css.map": "/my-favorite-movies/static/css/main.ff6b52be.css.map",
+    "main.a8e90282.js.map": "/my-favorite-movies/static/js/main.a8e90282.js.map",
+    "68.616ae98a.chunk.js.map": "/my-favorite-movies/static/js/68.616ae98a.chunk.js.map",
+    "701.627ee567.chunk.js.map": "/my-favorite-movies/static/js/701.627ee567.chunk.js.map",
+    "787.eeb72b54.chunk.js.map": "/my-favorite-movies/static/js/787.eeb72b54.chunk.js.map",
+    "901.fae47529.chunk.js.map": "/my-favorite-movies/static/js/901.fae47529.chunk.js.map",
+    "569.33537695.chunk.js.map": "/my-favorite-movies/static/js/569.33537695.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.88f81c92.css",
-    "static/js/main.c053a98b.js"
+    "static/css/main.ff6b52be.css",
+    "static/js/main.a8e90282.js"
   ]
 }
