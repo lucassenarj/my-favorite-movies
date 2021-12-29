@@ -1,6 +1,6 @@
 import React from "react";
-import Movie from "../../types/Movie";
 import MovieList from "../../types/MovieList";
+import MovieListItem from "../../types/MovieListItem";
 import { PopularListItem } from "./../";
 import "./style.scss";
 
@@ -12,7 +12,7 @@ const PopularList: React.FC<MovieList> = ({ title, movies }) => {
         <h5>{ title }</h5>
       </div>
       {
-        list.map((movie: Movie, key: number) => <PopularListItem {...movie} key={key} />)
+        list.map((movie: MovieListItem, key: number) => <PopularListItem {...movie} key={key} />)
       }
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Movie from "../../types/Movie";
+import MovieListItem from "../../types/MovieListItem";
 import "./style.scss";
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
 const Hero: React.FC<Props> = ({ resource }) => {
   const popular = resource.latest.read();
   const random: number = Math.floor(Math.random() * 19);
-  const movie: Movie = popular.data.results[random];
+  const movie: MovieListItem = popular.data.results[random];
   return (
     <section className="hero">
       <div className="container">

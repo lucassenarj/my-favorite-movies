@@ -1,6 +1,6 @@
 import React from "react";
 import { CategoryListItem } from "..";
-import Movie from "./../../types/Movie";
+import MovieListItem from "../../types/MovieListItem";
 import "./style.scss";
 
 interface Props {
@@ -30,7 +30,7 @@ const CategoryList: React.FC<Props> = ({ resource, target, title }) => {
       </div>
       <div className="row">
         { 
-          movies.sort(() => 0.5 - Math.random()).slice(0, 6).map((movie: Movie, key: number) => (
+          movies.sort(() => 0.5 - Math.random()).slice(0, 6).map((movie: MovieListItem, key: number) => (
             <CategoryListItem {...movie} key={key} />
           )) 
         }

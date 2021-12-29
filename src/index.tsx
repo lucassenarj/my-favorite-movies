@@ -18,7 +18,7 @@ const App = () => {
       <React.Suspense fallback={<Loader />}>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/movie/:slug" element={<Details />} />
+          <Route path="/movie/:slug/:id" element={<Details />} />
         </Routes>
       </React.Suspense>
     </BrowserRouter>

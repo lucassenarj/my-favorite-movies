@@ -1,6 +1,6 @@
 import React from "react";
-import Movie from "../../types/Movie";
 import MovieList from "../../types/MovieList";
+import MovieListItem from "../../types/MovieListItem";
 import { RecentListItem } from "./../";
 import "./style.scss";
 
@@ -12,7 +12,7 @@ const RecentList: React.FC<MovieList> = ({title, movies}) => {
         <h5>{ title }</h5>
       </div>
       <div className="filter__gallery">
-        { list.map((movie: Movie, key: number) => <RecentListItem {...movie} key={key} />) }
+        { list.map((movie: MovieListItem, key: number) => <RecentListItem {...movie} key={key} />) }
       </div>
     </div>
   );

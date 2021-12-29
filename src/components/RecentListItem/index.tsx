@@ -1,25 +1,28 @@
 import React from "react";
-import Movie from "../../types/Movie";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./style.scss";
 import generateUrlFriendly from "../../helpers/generateUrlFriendly";
+import MovieListItem from "../../types/MovieListItem";
 
-const RecentListItem: React.FC<Movie> = (movie) => {
+const RecentListItem: React.FC<MovieListItem> = (movie) => {
   const slug = generateUrlFriendly(`${movie.title}`);
+  const navigate = useNavigate();
   return (
-    <Link to={`movie/${slug}`}>
-      <div className="product__sidebar__view__item set-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w780/${movie.backdrop_path})` }}>
-        <div className="ep">{ movie.vote_average }</div>
-        <div className="view">
-          <i className="fa fa-eye"></i> {movie.popularity}
-        </div>
-        <h5>
-          <Link to={`movie/${slug}`}>
-            { movie.title }
-          </Link>
-        </h5>
+    <div 
+      className="product__sidebar__view__item set-bg"
+      style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w780/${movie.backdrop_path})` }}
+      onClick={() => navigate(`/movie/${slug}/${movie.id}`)}
+    >
+      <div className="ep">{ movie.vote_average }</div>
+      <div className="view">
+        <i className="fa fa-eye"></i> {movie.popularity}
       </div>
-    </Link>
+      <h5>
+        <Link to={`movie/${slug}/${movie.id}`}>
+          { movie.title }
+        </Link>
+      </h5>
+    </div>
   );
 };
 

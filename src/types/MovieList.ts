@@ -1,8 +1,8 @@
-import Movie from "./Movie";
+import MovieListItem from "./MovieListItem";
 
 type MovieList = {
   title: string;
-  movies: Array<Movie>;
+  movies: MovieListItem[];
 };
 
 export default MovieList;
