@@ -6,13 +6,19 @@
 }
 
 .hero__items {
-  padding: 250px 0 42px 50px;
+	padding: 250px 0 42px 50px;
   border-radius: 5px;
 }
 
 .hero__text {
   position: relative;
   z-index: 9;
+	transform: scale(0.9);
+	transition: ease, 0.2s;
+
+	&:hover {
+		transform: scale(1);
+	}
 
   .label {
     font-size: 13px;
@@ -24,6 +30,20 @@
     top: -100px;
     opacity: 1;
     @include transition(all, 0.2s);
+		margin-right: 10px;
+
+		a {
+			color: $primary-color;
+			top: 0;
+		}
+
+		&:hover {
+			background-color: $primary-color;
+
+			a {
+				color: $white-color;
+			}
+		}
   }
 
   h2 {

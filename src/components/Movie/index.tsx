@@ -64,10 +64,13 @@ function Movie({ resource }: Props) {
                 </div>
               </div>
             </div>
-            <div className="anime__details__btn">
-              <a href="/" className="follow-btn"><i className="fa fa-heart-o"></i> Follow</a>
-              <a href="/" className="watch-btn"><span>Watch Now</span> <i className="fa fa-angle-right"></i></a>
-            </div>
+            {
+              /*
+              <div className="anime__details__btn">
+                <a href="/" className="follow-btn"><i className="fa fa-heart-o"></i> Follow</a>
+                <a href="/" className="watch-btn"><span>Watch Now</span> <i className="fa fa-angle-right"></i></a>
+              </div>
+            */ }
           </div>
         </div>
       </div>
