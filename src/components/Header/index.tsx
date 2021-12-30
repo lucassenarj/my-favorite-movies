@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "./../../assets/img/logo.png";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import genresList from "../../helpers/genresList";
 import "./style.scss";
 import generateUrlFriendly from "../../helpers/generateUrlFriendly";
@@ -38,8 +38,12 @@ function Header() {
                       }
                     </ul>
                   </li>
-                  <li><a href="./blog.html">Our Blog</a></li>
-                  <li><a href="/">Contacts</a></li>
+                  <li className={`${location.pathname === '/tredings' ? 'active' : ''}`}>
+                    <Link to="/tredings">Tredings</Link>
+                  </li>
+                  <li className={`${location.pathname === '/toprated' ? 'active' : ''}`}>
+                    <Link to="/toprated">Top Rated</Link>
+                  </li>
                 </ul>
               </nav>
             </div>

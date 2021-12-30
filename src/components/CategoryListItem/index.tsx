@@ -14,12 +14,6 @@ const CategoryListItem: React.FC<MovieListItem> = (movie) => {
       <div className="product__item">
         <div className="product__item__pic set-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w300/${movie.poster_path})` }}>
           <div className="ep">{ movie.vote_average }</div>
-          <div className="comment">
-            <i className="fa fa-eye"></i> 11
-          </div>
-          <div className="view">
-            <span className="fa fa-eye"></span> {movie.vote_count}
-          </div>
         </div>
         <div className="product__item__text">
           <ul>

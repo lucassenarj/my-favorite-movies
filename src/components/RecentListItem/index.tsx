@@ -13,7 +13,7 @@ const RecentListItem: React.FC<MovieListItem> = (movie) => {
       style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w780/${movie.backdrop_path})` }}
       onClick={() => navigate(`/movie/${slug}/${movie.id}`)}
     >
-      <div className="ep">{ movie.vote_average.toFixed(2) } / 10</div>
+      <div className="ep">{ movie.vote_average.toFixed(1) } / 10</div>
       <div className="view">
         <i className="fa fa-check"></i> {movie.vote_count}
       </div>

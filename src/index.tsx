@@ -12,6 +12,8 @@ import "./assets/css/style.scss";
 const Categories  = React.lazy(() => import("./pages/Categories"));
 const Details  = React.lazy(() => import("./pages/Details"));
 const Home  = React.lazy(() => import("./pages/Home"));
+const TopRated  = React.lazy(() => import("./pages/TopRated"));
+const Tredings  = React.lazy(() => import("./pages/Tredings"));
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/movie/:slug/:id" element={<Details />} />
           <Route path="/category/:slug" element={<Categories />} />
+          <Route path="/tredings" element={<Tredings />} />
+          <Route path="/toprated" element={<TopRated />} />
         </Routes>
       </React.Suspense>
     </BrowserRouter>
