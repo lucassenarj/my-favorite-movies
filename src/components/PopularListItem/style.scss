@@ -36,6 +36,14 @@
       border-radius: 50px;
       display: inline-block;
     }
+
+		a {
+			color: $white-color;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
   }
 
   h5 {

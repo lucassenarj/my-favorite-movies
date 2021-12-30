@@ -1,12 +1,14 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import generateUrlFriendly from "../../helpers/generateUrlFriendly";
+import getMovieGenreList from "../../helpers/getMovieGenreList";
 import MovieListItem from "../../types/MovieListItem";
 import "./style.scss";
 
 const PopularListItem: React.FC<MovieListItem> = (movie) => {
   const slug = generateUrlFriendly(`${movie.title}`);
   const navigate = useNavigate();
+  const genresList = getMovieGenreList(movie.genre_ids);
   return (
     <div className="product__sidebar__comment__item" onClick={() => navigate(`/movie/${slug}/${movie.id}`)}>
       <div className="product__sidebar__comment__item__pic">
@@ -14,8 +16,11 @@ const PopularListItem: React.FC<MovieListItem> = (movie) => {
       </div>
       <div className="product__sidebar__comment__item__text">
         <ul>
-          <li>Active</li>
-          <li>Movie</li>
+          {
+            genresList.map((genre) => (
+              <li key={genre.id}><Link to={`/category/${generateUrlFriendly(genre.name)}`}> {genre.name} </Link></li>
+            ))
+          }
         </ul>
         <h5>
           <Link to={`movie/${slug}/${movie.id}`}>{ movie.title }</Link>

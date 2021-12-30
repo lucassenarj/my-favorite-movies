@@ -1,9 +1,13 @@
 import React from "react";
 import Logo from "./../../assets/img/logo.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import genresList from "../../helpers/genresList";
 import "./style.scss";
+import generateUrlFriendly from "../../helpers/generateUrlFriendly";
 
 function Header() {
+  const location = useLocation();
+
   return (
     <header className="header">
       <div className="container">
@@ -19,10 +23,21 @@ function Header() {
             <div className="header__nav">
               <nav className="header__menu mobile-menu">
                 <ul>
-                  <li className="active">
+                  <li className={`${location.pathname === '/' ? 'active' : ''}`}>
                     <Link to="/">Home</Link>
                   </li>
-                  <li><a href="./categories.html">Categories</a></li>
+                  <li className={`${location.pathname.includes('/category/') ? 'active' : ''}`}>
+                    <Link to="/category/action">Categories <span className="arrow_carrot-down"></span></Link>
+                    <ul className="dropdown">
+                      {
+                        genresList.map((genre) => (
+                          <li key={genre.id}>
+                            <Link to={`/category/${generateUrlFriendly(genre.name)}`}>{genre.name}</Link>
+                          </li>
+                        ))
+                      }
+                    </ul>
+                  </li>
                   <li><a href="./blog.html">Our Blog</a></li>
                   <li><a href="/">Contacts</a></li>
                 </ul>

@@ -1,5 +1,5 @@
-@import './../../assets/css/variable';
-@import './../../assets/css/mixins';
+@import "./../../assets/css/variable";
+@import "./../../assets/css/mixins";
 
 .header {
   background: #070720;
@@ -35,10 +35,49 @@
           // background: $primary-color;
           color: $white-color;
         }
+
+        .dropdown {
+          top: 62px;
+          opacity: 1;
+          visibility: visible;
+
+          li {
+            a {
+              background: transparent;
+            }
+          }
+        }
       }
 
       &:last-child {
         margin-right: 0;
+      }
+
+      .dropdown {
+        position: absolute;
+        left: 0;
+        top: 82px;
+        width: 150px;
+        background: $white-color;
+        text-align: left;
+        padding: 5px 0;
+        z-index: 9;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 999999;
+        @include transition(all, 0.3s);
+
+        li {
+          display: block;
+          margin-right: 0;
+
+          a {
+            font-size: 14px;
+            color: $heading-color;
+            font-weight: 500;
+            padding: 5px 20px;
+          }
+        }
       }
 
       a {

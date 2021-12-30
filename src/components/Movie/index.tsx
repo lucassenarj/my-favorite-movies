@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import calculateRate from "../../helpers/calculateRate";
+import generateUrlFriendly from "../../helpers/generateUrlFriendly";
 import Genre from "../../types/Genre";
 import MovieDetails from "../../types/MovieDetails";
 import ProductionCompanies from "../../types/ProductionCompanies";
@@ -23,8 +25,6 @@ function Movie({ resource }: Props) {
       <div className="row">
         <div className="col-lg-3">
           <div className="anime__details__pic set-bg" style={{ backgroundImage: `url(https://image.tmdb.org/t/p/w300/${movie.poster_path})` }}>
-            <div className="comment"><i className="fa fa-comments"></i> 11</div>
-            <div className="view"><i className="fa fa-eye"></i> 9141</div>
           </div>
         </div>
         <div className="col-lg-9">
@@ -48,7 +48,9 @@ function Movie({ resource }: Props) {
                     <li><span>Studios:</span> { movie.production_companies.map((studio: ProductionCompanies) => studio.name).join(', ') }</li>
                     <li><span>Release Date:</span> { new Date(movie.release_date).toLocaleDateString() }</li>
                     <li><span>Status:</span> { movie.status }</li>
-                    <li><span>Genre:</span> { movie.genres.map((genre: Genre) => genre.name).join(', ') }</li>
+                    <li><span>Genre:</span> { 
+                      movie.genres.map((genre: Genre) => <Link key={genre.id} to={`/category/${generateUrlFriendly(genre.name)}`}>{ genre.name }, </Link>)
+                    }</li>
                   </ul>
                 </div>
                 <div className="col-lg-6 col-md-6">

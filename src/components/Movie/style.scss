@@ -97,6 +97,15 @@
           position: relative;
           padding-left: 18px;
 
+          a {
+            color: $white-color;
+            margin-right: 5px;
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+
           &:before {
               position: absolute;
               left: 0;

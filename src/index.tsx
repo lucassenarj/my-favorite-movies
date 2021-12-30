@@ -9,8 +9,9 @@ import "./assets/css/elegant-icons.css";
 import "./assets/css/slicknav.min.css";
 import "./assets/css/style.scss";
 
-const Home  = React.lazy(() => import("./pages/Home"));
+const Categories  = React.lazy(() => import("./pages/Categories"));
 const Details  = React.lazy(() => import("./pages/Details"));
+const Home  = React.lazy(() => import("./pages/Home"));
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/movie/:slug/:id" element={<Details />} />
+          <Route path="/category/:slug" element={<Categories />} />
         </Routes>
       </React.Suspense>
     </BrowserRouter>

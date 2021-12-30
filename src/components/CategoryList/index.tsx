@@ -7,9 +7,10 @@ interface Props {
   resource: any;
   title: string;
   target: string;
+  displayAll?: boolean;
 }
 
-const CategoryList: React.FC<Props> = ({ resource, target, title }) => {
+const CategoryList: React.FC<Props> = ({ resource, target, title, displayAll = false }) => {
   const list = resource[target].read();
   const movies = list.data.results;
   return (
@@ -21,18 +22,28 @@ const CategoryList: React.FC<Props> = ({ resource, target, title }) => {
           </div>
         </div>
         <div className="col-lg-4 col-md-4 col-sm-4">
-          <div className="btn_all">
-            <a href="/" className="primary-btn">
-              View All <span className="arrow_right"></span>
-            </a>
-          </div>
+          {
+            !displayAll && (
+              <div className="btn_all">
+                <a href="/" className="primary-btn">
+                  View All <span className="arrow_right"></span>
+                </a>
+              </div>
+            )
+          }
         </div>
       </div>
       <div className="row">
-        { 
-          movies.sort(() => 0.5 - Math.random()).slice(0, 6).map((movie: MovieListItem, key: number) => (
-            <CategoryListItem {...movie} key={key} />
-          )) 
+        {
+          displayAll ? (
+            movies.map((movie: MovieListItem, key: number) => (
+              <CategoryListItem {...movie} key={key} />
+            ))
+          ) : (
+            movies.sort(() => 0.5 - Math.random()).slice(0, 6).map((movie: MovieListItem, key: number) => (
+              <CategoryListItem {...movie} key={key} />
+            ))
+          )
         }
       </div>
     </div>

@@ -65,9 +65,18 @@
       color: $white-color;
       font-weight: 700;
       padding: 1px 10px;
+			margin-right: 5px;
       background: rgba(255, 255, 255, 0.2);
       border-radius: 50px;
       display: inline-block;
+
+			a {
+				color: $white-color;
+	
+				&:hover {
+					color: $primary-color;
+				}
+			}
     }
   }
 
