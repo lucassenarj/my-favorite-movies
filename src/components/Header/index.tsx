@@ -14,9 +14,9 @@ function Header() {
         <div className="row">
           <div className="col-lg-2">
             <div className="header__logo">
-              <a href="/">
+              <Link to="/">
                 <img src={Logo} alt="Logo" />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-8">

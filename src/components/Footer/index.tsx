@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "./../../assets/img/logo.png";
 import "./style.scss";
 
@@ -15,18 +16,26 @@ function Footer() {
         <div className="row">
           <div className="col-lg-3">
             <div className="footer__logo">
-              <a href="./index.html">
+              <Link to="/">
                 <img src={Logo} alt="" />
-              </a>
+              </Link>
             </div>
           </div>
           <div className="col-lg-6">
             <div className="footer__nav">
               <ul>
-                <li className="active"><a href="./index.html">Homepage</a></li>
-                <li><a href="./categories.html">Categories</a></li>
-                <li><a href="./blog.html">Our Blog</a></li>
-                <li><a href="/">Contacts</a></li>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/category/action">Categories</Link>
+                </li>
+                <li>
+                  <Link to="/tredings">Tredings</Link>
+                </li>
+                <li>
+                  <Link to="/toprated">Top Rated</Link>
+                </li>
               </ul>
             </div>
           </div>
