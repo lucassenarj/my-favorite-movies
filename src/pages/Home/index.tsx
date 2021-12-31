@@ -19,7 +19,7 @@ const resource = createHomePageResource();
 const Home: React.FC = () => {
   return (
     <React.Fragment>
-      <Header />
+      <Header title="My favorite movies - Home Page" />
       <Hero resource={resource} />
       <section className="product spad">
         <div className="container">

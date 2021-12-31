@@ -11,7 +11,7 @@ function Tredings() {
   
   return (
     <Fragment>
-      <Header />
+      <Header title="Trendings - My Favorite Movies" />
       <Breadcrumb />
       <section className="product spad">
         <div className="container">

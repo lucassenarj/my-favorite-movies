@@ -1,15 +1,19 @@
 import React from "react";
 import Logo from "./../../assets/img/logo.png";
 import { Link, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import genresList from "../../helpers/genresList";
 import "./style.scss";
 import generateUrlFriendly from "../../helpers/generateUrlFriendly";
 
-function Header() {
+function Header({ title }: { title: string }) {
   const location = useLocation();
 
   return (
     <header className="header">
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <div className="container">
         <div className="row">
           <div className="col-lg-2">

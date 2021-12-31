@@ -15,7 +15,7 @@ function Details() {
 
   return (
     <React.Fragment>
-      <Header />
+      <Header title="Movie Details - My favorite movie" />
       <Breadcrumb />
 
       <section className="anime-details spad">

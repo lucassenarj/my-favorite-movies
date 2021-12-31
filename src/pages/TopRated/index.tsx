@@ -11,7 +11,7 @@ function TopRated() {
   
   return (
     <Fragment>
-      <Header />
+      <Header title="Top Rated Movies - My Favorite Movies" />
       <Breadcrumb />
       <section className="product spad">
         <div className="container">
