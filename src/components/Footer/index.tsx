@@ -1,16 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import scrollToTop from "../../helpers/scrollToTop";
 import Logo from "./../../assets/img/logo.png";
 import "./style.scss";
 
 function Footer() {
-  const year = new Date().getFullYear();
   return (
     <footer className="footer">
       <div className="page-up">
-        <a href="/" id="scrollToTopButton">
+        <button onClick={() => scrollToTop()} id="scrollToTopButton">
           <span className="arrow_carrot-up"></span>
-        </a>
+        </button>
       </div>
       <div className="container">
         <div className="row">
@@ -39,12 +39,11 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 footer__copyright__text">
             <p>
-              Copyright &copy;
-              { year }
-              All rights reserved | This template is made with <i className="fa fa-heart" aria-hidden="true"></i> by <a href="/" target="_blank">Colorlib</a>
+              &copy; Develop by: <a href="https://lucassenarj.github.io/" title="Lucas Sena" target="_blank" rel="noreferrer">Lucas Sena</a>
             </p>
+            <p>Template by <a href="https://colorlib.com/" rel="noreferrer" title="Colorlib" target="_blank">Colorlib</a></p>
 
           </div>
         </div>

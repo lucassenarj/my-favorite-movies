@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Logo from "./../../assets/img/logo.png";
 import { Link, useLocation } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import genresList from "../../helpers/genresList";
 import "./style.scss";
 import generateUrlFriendly from "../../helpers/generateUrlFriendly";
+import scrollToTop from "../../helpers/scrollToTop";
 
 function Header({ title }: { title: string }) {
   const location = useLocation();
+
+  useEffect(() => {
+    scrollToTop();
+  }, [])
 
   return (
     <header className="header">
