@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "My Favorite Movies",
+  "name": "My Favorite Movies",
   "icons": [
     {
       "src": "favicon.ico",
@@ -19,7 +19,9 @@
     }
   ],
   "start_url": ".",
+  "scope": "/my-favorite-movies/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#e53637",
+  "background_color": "#0b0c2a",
+  "description": "Create lists for your favorite movies"
 }
