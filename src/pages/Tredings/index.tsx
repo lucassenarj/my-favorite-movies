@@ -12,7 +12,7 @@ function Tredings() {
   return (
     <Fragment>
       <Header title="Trendings - My Favorite Movies" />
-      <Breadcrumb />
+      <Breadcrumb name="Trendings" />
       <section className="product spad">
         <div className="container">
           <div className="row">

@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { useParams } from "react-router-dom";
 import { createDetailsResource } from "../../api/resources/detailsResource";
-import { Breadcrumb, Footer, Header } from "./../../components";
+import { Footer, Header } from "./../../components";
 
 const Movie = React.lazy(() => import("./../../components/Movie"));
 const ReviewList = React.lazy(() => import("./../../components/ReviewList"));
@@ -16,7 +16,6 @@ function Details() {
   return (
     <React.Fragment>
       <Header title="Movie Details - My favorite movie" />
-      <Breadcrumb />
 
       <section className="anime-details spad">
         <div className="container">

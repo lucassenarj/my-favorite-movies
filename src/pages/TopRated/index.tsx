@@ -12,7 +12,7 @@ function TopRated() {
   return (
     <Fragment>
       <Header title="Top Rated Movies - My Favorite Movies" />
-      <Breadcrumb />
+      <Breadcrumb name="Top rated" />
       <section className="product spad">
         <div className="container">
           <div className="row">

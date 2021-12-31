@@ -24,7 +24,7 @@ function Categories() {
   return (
     <Fragment>
       <Header title="Category page - My Favorite Movies" />
-      <Breadcrumb />
+      <Breadcrumb name="Categories" />
       <section className="product spad">
         <div className="container">
           <div className="row">
